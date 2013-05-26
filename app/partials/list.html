@@ -1,0 +1,22 @@
+<h2>Repositories</h2>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th class="span1">id</th>
+      <th>name</th>
+      <th class="span1">language</th>
+      <th class="span1">created</th>
+      <th class="span1">updated</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="item in repos">
+      <td>{{item.id}}</td>
+      <td><a href="#/edit/{{item.owner.login}}/{{item.name}}">{{item.name}}</a>&nbsp;<span class="label {{item.private && 'label-important' || 'label-success'}}">{{item.private && 'private' || 'public'}}</span></td>
+      <td>{{item.language}}</td>
+      <td>{{item.created_at}}</td>
+      <td>{{item.updated_at}}</td>
+    </tr>
+  </tbody>
+</table>

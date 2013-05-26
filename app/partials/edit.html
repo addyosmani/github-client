@@ -1,0 +1,22 @@
+<h2>Edit rep #&nbsp;{{item.id}}</h2>
+
+<form name="saveForm" class="form-horizontal">
+	<fieldset>
+		<div class="control-group" ng-class="{error: saveForm.name.$invalid}">
+			<label class="control-label">Name</label>
+			<div class="controls">
+				<input class="input-block-level" name="name" type="text" ng-model="item.name" readonly>
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="text">Description</label>
+			<div class="controls">
+				<textarea class="input-block-level" name="description" ng-model="item.description"></textarea>
+			</div>
+		</div>
+		<div class="form-actions">
+			<input class="btn btn-success" type="button" ng-disabled="saveForm.$invalid" href="#/list" ng-click="save()" value="Save">
+			<a href="#/list" class="btn">Cancel</a>
+		</div>
+	</fieldset>
+</form>
