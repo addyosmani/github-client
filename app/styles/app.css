@@ -1,5 +1,14 @@
 /* app css stylesheet */
 
 body {
-  padding-top: 20px;
+  font-size:16px;
+}
+
+@media all and (max-width: 420px) and (min-width: 100px) {
+  .extended{
+  	display:none;
+  }
+ table td[class*="span"], table th[class*="span"], .row-fluid table td[class*="span"], .row-fluid table th[class*="span"]{
+ 	display:none;
+ }
 }

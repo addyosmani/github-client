@@ -31,6 +31,16 @@ var MyCtrlAuth = ['$scope', '$http', '$location', function ($scope, $http, $loca
                         app.token = token;
                         $http.defaults.headers.common['Authorization'] = 'token ' + app.token;
                         // $location.path('/list') invalid
+
+                        if(!!navigator.mozNotification && !!navigator.vibrate){
+                            var notification = navigator.mozNotification.createNotification(
+                                "See this", 
+                                "Login successful!"
+                            );
+                             notification.show();
+                            var vibrating =  navigator.vibrate(2000);
+                        }
+
                         location.hash = '/list';
                     } else {
                         console.error("parse token");
