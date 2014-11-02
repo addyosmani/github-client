@@ -1,7 +1,7 @@
 {
     "version": "1",
     "name": "github-client",
-    "launch_path": "/github-client/app/index.html",
+    "launch_path": "/app/index.html",
     "description": "GitHub client",
     "icons": {
         "16": "/app/images/logo16.png",
